@@ -6,7 +6,7 @@ import { UserPhoto } from "../UserPhoto";
 
 import { styles } from "./style";
 
-export type Message = {
+export type MessageProps = {
   id: string;
   text: string;
   user: {
@@ -15,11 +15,11 @@ export type Message = {
   };
 };
 
-type MessageProps = {
-  data: Message
+export type Props = {
+  data: MessageProps
 }
 
-export function Message({ data }: MessageProps) {
+export function Message({ data }: Props) {
   return (
     <MotiView  from={{ opacity: 0, translateY: -50 }}
     animate={{ opacity: 1, translateY: 0 }}
